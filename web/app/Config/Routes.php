@@ -21,7 +21,7 @@ $routes->setDefaultController('Home');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
-$routes->setAutoRoute(false);
+$routes->setAutoRoute(true);
 
 /*
  * --------------------------------------------------------------------
@@ -42,6 +42,9 @@ $routes->get('/', 'LoginController::index');
 
 $routes->match(['get', 'post'], 'news/create', 'News::create');
 $routes->get('news/(:segment)', 'News::view/$1');
+$routes->get('/clear', 'DbController::clear');
+$routes->get('/', 'ContrasenaController::recuperar_contrasena/index');
+$routes->get('/', 'RegistroController::registro/index');
 $routes->get('news', 'News::index');
 $routes->get('(:any)', 'Pages::view/$1');
 

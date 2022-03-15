@@ -9,8 +9,8 @@
     <!-- Bootstrap CSS -->
     <script type="text/javascript" src="<?=base_url("adminlte/js/adminlte.js");?>"></script>
     <link rel="stylesheet" href="<?=base_url("adminlte/css/adminlte.css");?>">
+    <link rel="stylesheet" href="<?=base_url("adminlte/fontawesome-free/css/all.css");?>">
   <body>
     <?=$this->renderSection('contenido')?>
-    
   </body>
 </html>
